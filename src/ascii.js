@@ -22,8 +22,8 @@ function init() {
     1000
   );
 
-  camera.position.x = -250;
-  camera.position.y = 100;
+  camera.position.x = -300;
+  camera.position.y = 80;
   camera.position.z = 300;
 
   // Make camera look at the center of HELLO text
@@ -33,7 +33,7 @@ function init() {
   scene.background = new THREE.Color(0, 0, 0);
 
   const pointLight1 = new THREE.PointLight(0xffffff, 3, 0, 0);
-  pointLight1.position.set(500, 500, 500);
+  pointLight1.position.set(300, 300, 300);
   scene.add(pointLight1);
 
   // const pointLight2 = new THREE.PointLight(0xffffff, 1, 0, 0);
@@ -41,7 +41,7 @@ function init() {
   // scene.add(pointLight2);
 
   // const cameraLight = new THREE.PointLight(0xffffff, 1, 0, 0);
-  // cameraLight.position.set(-150, 100, -30); // 카메라 기준 상대 위치
+  // cameraLight.position.set(-50, 50, -10); // 카메라 기준 상대 위치
   // //                         왼   위   뒤
   // camera.add(cameraLight);
   // scene.add(camera);
@@ -83,7 +83,7 @@ function init() {
 }
 
 function createHelloText(font) {
-  const letterSpacing = 90;
+  const letterSpacing = 80;
   const startX = -250; // Center the word
   const letters_text = ["H", "E", "L", "L", "O"];
 
@@ -169,9 +169,9 @@ function animate() {
       Math.cos(timer * userData.driftSpeedZ) * userData.driftAmplitudeZ;
 
     // Independent rotation for each letter
-    letter.rotation.x += userData.rotationSpeedX;
-    letter.rotation.y += userData.rotationSpeedY;
-    letter.rotation.z += userData.rotationSpeedZ;
+    // letter.rotation.x += userData.rotationSpeedX;
+    // letter.rotation.y += userData.rotationSpeedY;
+    // letter.rotation.z += userData.rotationSpeedZ;
   });
 
   controls.update();
